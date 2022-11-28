@@ -16,7 +16,12 @@ class HomePage extends StatelessWidget {
              child: Text("Hello World : $days")
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Container(
+            child: Center(child: Text("Welcome"))
+        ),
+      ),
     );
   }
 }
+  
