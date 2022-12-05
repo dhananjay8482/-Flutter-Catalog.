@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/login.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -32,6 +33,16 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(CupertinoIcons.home),
               title: Text("Home", textScaleFactor: 1.2 ),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.arrow_right_circle),
+              title: Text("Login", textScaleFactor: 1.2 ),
+              onTap: ()=>{
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                )
+              },
             ),
             ListTile(
               leading: Icon(CupertinoIcons.profile_circled),
